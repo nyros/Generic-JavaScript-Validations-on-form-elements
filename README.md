@@ -57,7 +57,7 @@ check each field whether it is in given format not.In this application we did wr
 	Screenshot2 :- This is the screen shot of the second form.
 
 	
-<img style="max-width:100%;" src="https://github.com/veerababu-nyros/Generic-JavaScript-Validations-on-form-elements/raw/master/Screenshot1.bmp" alt="formvalidate" title="formvalidate">
+<img style="max-width:100%;" src="https://github.com/veerababu-nyros/Generic-JavaScript-Validations-on-form-elements/raw/master/screenshot1.bmp" alt="formvalidate" title="formvalidate">
 
-<img style="max-width:100%;" src="https://github.com/veerababu-nyros/Generic-JavaScript-Validations-on-form-elements/raw/master/Screenshot2.bmp" alt="formvalidate" title="formvalidate">
+<img style="max-width:100%;" src="https://github.com/veerababu-nyros/Generic-JavaScript-Validations-on-form-elements/raw/master/screenshot2.bmp" alt="formvalidate" title="formvalidate">
 
