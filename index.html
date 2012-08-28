@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>form1</title>
+
+<link rel="stylesheet" href="css/css.css" type="text/css" />
+<script type="text/javascript" src="includes/genericjs.js"> </script>
+<script type="text/javascript" >
+function formValidator1(){
+	var username=document.getElementById("username");
+	var password= document.getElementById("password");
+	
+	if(isAlphaNumeric(username,5,"Enter Valid username or \n check the length")){
+		if(isAlphaNumeric(password,1,"Enter valid Password or \n check the length")){
+			return true;
+		}
+		return false;
+	}
+	return false;
+}
+</script>
+</head>
+
+<body>
+
+<h1 style="text-align:center;color: #CC0000;font-family:arial"> FORM 1 </h1>
+	<form id="frm1"  name="frm1" action="form2.html" onSubmit="return formValidator1()">
+		<h2> Application Form </h2>
+		<fieldset>
+			<legend> <h3> Account Information </h3></legend>
+			<div id="name" class="row">
+				<label class="label" for="username">  UserName *</label>
+				<div id="user" class="collection">
+					<input id="username" class="alphanumeric" type="text" aria-required="true" autocomplete="off" minleght="5" maxlength="8" size="32" value="" name="username" title="User Name" tabindex="1">
+				</div>
+			</div>
+			<div id="pass" class="row ">
+				<label class="label" for="password">Password *</label>
+				<div class="collection">
+					<input id="password" class="alphanumeric" type="password" aria-required="true" maxlength="6" size="32" value="" name="password" tabindex="1">
+				</div>
+			</div>
+		</fieldset>
+		<fieldset style="text-align:right;border:none;">
+			<input type="submit" value="Submit" id="sub">
+		</fieldset>
+	</form>
+
+
+</body>
+</html>

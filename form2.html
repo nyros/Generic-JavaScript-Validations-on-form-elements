@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Form 2</title>
+
+<link rel="stylesheet" href="css/css.css" type="text/css" />
+<script type="text/javascript" src="includes/genericjs.js"> </script>
+
+
+<script type="text/javascript" > 
+function formValidator2()
+{
+	var firstname=document.getElementById("firstname");
+	var lastname=document.getElementById("lastname");
+	var date=document.getElementById("dd");
+	var month=document.getElementById("mm");
+	var year=document.getElementById("yyyy");
+	
+	if(isAlphabet(firstname,2,"Enter Valid firstname or \n check the length")){
+		if(isAlphabet(lastname,2,"Enter Valid lastname or \n check the length")){
+			if(isNumeric(date,2,"Enter only numbers for date")){
+				if(madeSelection(month,"Please Choose a month")){
+					if(isNumeric(year,4,"Enter only numbers for year")){
+						alert("successfully submitted");
+						return "true";
+					}
+					return false;
+				} 
+				return false;
+			} 
+			return false;
+		}
+		return false;
+	} 
+	return false;
+}
+</script>
+
+</head>
+
+<body>
+<h1 style="text-align:center;color: #CC0000;font-family:arial"> FORM 2 </h1>
+
+	<form id="frm2" action="index.html" onSubmit="return formValidator2()">
+		<h2> Application Form </h2>
+		<fieldset>
+			<legend> <h3> Profile Information </h3></legend>
+			<div id="first" class="row">
+				<label class="label" for="firstname"> First Name *</label>
+				<div id="first" class="collection">
+					<input id="firstname" class="fieldValInit" type="text" aria-required="true" autocomplete="off" minleght="2" maxlength="6" size="32" value="" name="firstname" title="First Name" tabindex="1">
+				</div>
+			</div>
+			<div id="last" class="row">
+				<label class="label" for="lastname"> Last Name *</label>
+				<div id="name" class="collection">
+					<input id="lastname" class="fieldValInit" type="text" aria-required="true" autocomplete="off" minleght="2" maxlength="15" size="32" value="" name="lastname" title="Last Name" tabindex="1">
+				</div>
+			</div>
+			<div id="gender" class="row" > 
+				<label class="label" for="gendercollection"> Gender * </label>
+				<div id="gendercollection" class="collection">
+					<input type="radio" id="male" name="radio" checked style="width:50px;"> Male  <br>
+					<input type="radio" id="female" name="radio" style="width:50px;"> Female				</div>
+			</div>
+			<div id="dobFld" class="row">
+				<label class="label" for="birthdategroup">Date of Birth *</label>
+				<div id="birthdategroup" class="collection" title="Birthday">
+					<input id="dd" class="dateInput fieldValInit" type="text" aria-required="true" autocomplete="off" maxlength="2" size="32" value="" name="dd" title="Date" tabindex="1">
+					<select id="mm" class="" aria-required="true" name="mm" title="Select Month" tabindex="1">
+						<option selected="" value="" title="- Select Month -">Select Month</option>
+						<option value="1" title="January">January</option>
+						<option value="2" title="February">February</option>
+						<option value="3" title="March">March</option>
+						<option value="4" title="April">April</option>
+						<option value="5" title="May">May</option>
+						<option value="6" title="June">June</option>
+						<option value="7" title="July">July</option>
+						<option value="8" title="August">August</option>
+						<option value="9" title="September">September</option>
+						<option value="10" title="October">October</option>
+						<option value="11" title="November">November</option>
+						<option value="12" title="December">December</option>
+					</select>
+					<input id="yyyy" class="dateInput fieldValInit" type="text" aria-required="true" autocomplete="off" maxlength="4" size="32" value="" name="yyyy" title="Year" tabindex="1">
+				</div>
+			</div>
+		</fieldset>
+		<fieldset style="text-align:right;border:none;">
+			<input type="submit" value="Submit" id="sub">
+		</fieldset>
+	</form>
+</body>
+</html>
